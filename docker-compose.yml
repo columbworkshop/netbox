@@ -21,6 +21,7 @@ services:
   
   netbox-worker:
     <<: *netbox
+    container_name: netbox-worker
     depends_on:
       - redis
       - postgres
@@ -31,6 +32,7 @@ services:
   
   netbox-housekeeping:
     <<: *netbox
+    container_name: netbox-housekeeping
     depends_on:
       - redis
       - postgres
